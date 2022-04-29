@@ -3,7 +3,7 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 
 ## Wireflow
 ![Wireflow](https://user-images.githubusercontent.com/26089533/166059026-5cb29b42-1e81-4268-b1fe-ad049df2c29b.jpg)
-
+<img height="400" src="https://user-images.githubusercontent.com/26089533/166059026-5cb29b42-1e81-4268-b1fe-ad049df2c29b.jpg"/>
 
 ## Breakdown
 ![Breakdown](https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg)
