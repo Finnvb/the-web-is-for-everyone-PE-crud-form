@@ -2,12 +2,10 @@
 Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan de jeugdzorg API. Met behulp van Progressive Enhancement werkt deze form ook op oudere browsers. 
 
 ## Wireflow
-
-<img height="900" src="https://user-images.githubusercontent.com/26089533/166059026-5cb29b42-1e81-4268-b1fe-ad049df2c29b.jpg"/>
+<img height="900" alt="Wireflow" src="https://user-images.githubusercontent.com/26089533/166059026-5cb29b42-1e81-4268-b1fe-ad049df2c29b.jpg"/>
 
 ## Breakdown
-![Breakdown](https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg)
-<img height="1000" src="https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg"/>
+<img height="1000" alt="Breakdown" src="https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg"/>
 
 ## Code
 <!-- Toon hier de verschillende technieken die je gebruikt en hoe je dit met de CSS cascade en/of JS feature detect hebt gecodeerd -->
