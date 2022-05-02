@@ -86,12 +86,10 @@ const server = app.listen(app.get('port'), () => {
 
 
 
-
-
-
-
 async function fetchJson(url, data = {}) {
     return await fetch(url, data)
       .then((response) => response.json())
       .catch((error) => error)
   }
+
+  

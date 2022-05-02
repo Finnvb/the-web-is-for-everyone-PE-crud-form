@@ -15,7 +15,7 @@ function hidePreloader() {
 
 
 const submitBtn = document.querySelector('#submitButton');
-// const submitSucces = document.querySelector('.submitSucces');
+const submitSucces = document.querySelector('.submitSucces');
 // console.log(submitBtn)
 // console.log(submitSucces)
 
@@ -30,4 +30,3 @@ const submitBtn = document.querySelector('#submitButton');
    
 //     submitSucces.style.display = 'none'
 // }, 2000)})
-
