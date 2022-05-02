@@ -10,7 +10,7 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 ## Code
 
 ###Javascript server side post
-
+```
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
      console.log(competentie)
@@ -52,7 +52,7 @@ app.get('/', async (req, res) => {
       .then((response) => response.json())
       .catch((error) => error)
   }
-
+```
 ## Licentie
 
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
