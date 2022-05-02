@@ -8,7 +8,7 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 <img height="800" alt="Breakdown" src="https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg"/>
 
 ## Code
-
+`
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
      console.log(competentie)
@@ -60,7 +60,7 @@ async function fetchJson(url, data = {}) {
       .then((response) => response.json())
       .catch((error) => error)
   }
-
+`
 
 
 ## Licentie
