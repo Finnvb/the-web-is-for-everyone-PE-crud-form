@@ -1,0 +1,49 @@
+<%- include('./partials/head') %>
+
+
+<div class="container">
+
+<a href="/"><img class="arrowLeft" src="/assets/arrowLeft.png" alt="Arrow-left"></a>
+
+<h1>Alle Competenties</h1>
+
+
+
+<table>
+    <tr>
+        <th class="tableHeader">ID</th>
+        <th class="tableHeader">Competentienaam</th>
+
+    </tr>
+    <td>
+        <ul>
+            <% competentie.forEach(competentie=>{ %> 
+              <li><%= competentie.competentieId %>
+                  </li>
+            <% }) %>
+          </ul>
+    </td>
+    <td>
+        <ul>
+            <% competentie.forEach(competentie=>{ %> 
+              <li>
+                  <%= competentie.naam %></li>
+            <% }) %>
+          </ul>
+    </td>
+
+</table>
+
+
+
+
+
+
+ 
+
+</div>
+
+
+
+
+<%- include('./partials/foot') %>

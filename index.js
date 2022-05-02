@@ -40,6 +40,34 @@ app.get('/', async (req, res) => {
    })
 
 
+   app.get('/competenties', async (req, res) => {
+    competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
+     console.log(competentie)
+     res.render('competenties'), {
+   
+       competentie
+   
+     }
+   })
+   
+
+   app.post('/', urlencodedParser, (req, res) => {
+
+    const postData = {
+      method: 'POST',
+      body: JSON.stringify(req.body),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    fetchJson(`${URL}v1/competentie`, postData).then(function () {
+      res.render('index', {
+        naam: 'req.body'
+      })
+    })
+  
+  })
+
 
 
 

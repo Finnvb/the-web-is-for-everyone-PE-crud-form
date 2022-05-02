@@ -1,7 +1,18 @@
 <%- include('./partials/head') %>
 
-<h1>Test</h1>
-<p>Hallo</p>
+<form action="/" method="POST">
+    <fieldset>
+        <h1>Competentie Toevoegen</h1>
+        <div>
+            <label for="naam">Competentie:</label>
+            <input type="text" id="naam" placeholder="Competentienaam" name="naam">
+            <button type="submit" id="submitButton">Submit</button>
+           
+        </div>
+        <a href="competenties">Zie alle Competenties</a>
+       
+    </fieldset>
+</form>
 
 
 <%- include('./partials/foot') %>
