@@ -1,6 +1,8 @@
 # Reflect For Effect PE crud Form
 Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan de jeugdzorg API. Door middel van Progressive Enhancement werkt deze form ook op oudere browsers. 
 
+![afbeelding](https://user-images.githubusercontent.com/26089533/166312667-ec5faebd-9b8f-4e91-a891-0c7b21199b6e.png)
+
 ## Wireflow
 <img height="800" alt="Wireflow" src="https://user-images.githubusercontent.com/26089533/166059026-5cb29b42-1e81-4268-b1fe-ad049df2c29b.jpg"/>
 
@@ -9,7 +11,7 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 
 ## Code
 
-###Javascript server side post
+### Javascript server side post
 ```
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
