@@ -8,7 +8,9 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 <img height="800" alt="Breakdown" src="https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg"/>
 
 ## Code
-`
+
+###Javascript server side post
+
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
      console.log(competentie)
@@ -45,23 +47,11 @@ app.get('/', async (req, res) => {
   
   })
 
-
-   app.set('port', process.env.PORT || 3000)
-
-const server = app.listen(app.get('port'), () => {
-  console.log(`Application started on port: ${app.get('port')}`)
-  console.log('http://localhost:3000');
-})
-
-
-
-async function fetchJson(url, data = {}) {
+  async function fetchJson(url, data = {}) {
     return await fetch(url, data)
       .then((response) => response.json())
       .catch((error) => error)
   }
-`
-
 
 ## Licentie
 
