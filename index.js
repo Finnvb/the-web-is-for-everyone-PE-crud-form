@@ -24,18 +24,11 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 
-
-
-
-
-
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
      console.log(competentie)
      res.render('index'), {
-   
        competentie
-   
      }
    })
 
@@ -44,9 +37,7 @@ app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
      console.log(competentie)
      res.render('competenties'), {
-   
        competentie
-   
      }
    })
    
@@ -69,9 +60,11 @@ app.get('/', async (req, res) => {
   
   })
 
-
-
-
+  async function fetchJson(url, data = {}) {
+    return await fetch(url, data)
+      .then((response) => response.json())
+      .catch((error) => error)
+  }
 
 
    app.set('port', process.env.PORT || 3000)
@@ -83,13 +76,5 @@ const server = app.listen(app.get('port'), () => {
 
 
 
-
-
-
-async function fetchJson(url, data = {}) {
-    return await fetch(url, data)
-      .then((response) => response.json())
-      .catch((error) => error)
-  }
 
   
