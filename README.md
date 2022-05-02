@@ -8,8 +8,59 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 <img height="800" alt="Breakdown" src="https://user-images.githubusercontent.com/26089533/166059064-0894063f-ddb3-48f9-85f6-58eaa33a0be5.jpg"/>
 
 ## Code
-<!-- Toon hier de verschillende technieken die je gebruikt en hoe je dit met de CSS cascade en/of JS feature detect hebt gecodeerd -->
-<!-- documenteer het onderzoek met de browser ondersteuning in de WIKI van de leertaak -->
+
+app.get('/', async (req, res) => {
+    competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
+     console.log(competentie)
+     res.render('index'), {
+       competentie
+     }
+   })
+
+
+   app.get('/competenties', async (req, res) => {
+    competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
+     console.log(competentie)
+     res.render('competenties'), {
+       competentie
+     }
+   })
+   
+
+
+   app.post('/', urlencodedParser, (req, res) => {
+
+    const postData = {
+      method: 'POST',
+      body: JSON.stringify(req.body),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    fetchJson(`${URL}v1/competentie`, postData).then(function () {
+      res.render('index', {
+        naam: 'req.body'
+      })
+    })
+  
+  })
+
+
+   app.set('port', process.env.PORT || 3000)
+
+const server = app.listen(app.get('port'), () => {
+  console.log(`Application started on port: ${app.get('port')}`)
+  console.log('http://localhost:3000');
+})
+
+
+
+async function fetchJson(url, data = {}) {
+    return await fetch(url, data)
+      .then((response) => response.json())
+      .catch((error) => error)
+  }
+
 
 
 ## Licentie
