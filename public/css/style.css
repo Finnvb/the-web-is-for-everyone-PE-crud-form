@@ -138,9 +138,37 @@ ul li {
 }
 
 
+.submitSucces{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    text-align: center;
+    position: absolute;
+    top:40%;
+    left:45%;
+    padding-top: 50px;
+    display: none;
+
+}
 
 
+.submitFail{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+    position: absolute;
+    top:40%;
+    left:45%;
+    padding-top: 50px;
+    display: none;
+}
 
+
+.submitIcon{
+    width: 50px;
+    margin-top: 20px;
+}
 
 /* loader animation */
 

@@ -10,11 +10,11 @@ const fetch = (...args) => import('node-fetch').then(({
   console.log(URL);
 
 //parses user data
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const req = require('express/lib/request');
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
 })
-// app.use(bodyParser.urlencoded({extended: true}))
 
 // Serve public files
 app.use(express.static('public'))
@@ -50,6 +50,7 @@ app.get('/', async (req, res) => {
      }
    })
    
+
 
    app.post('/', urlencodedParser, (req, res) => {
 
