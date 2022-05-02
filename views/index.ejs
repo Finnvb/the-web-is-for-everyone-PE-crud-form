@@ -1,15 +1,24 @@
 <%- include('./partials/head') %>
 
-<form action="/" method="POST">
+<body>
+
+<div class="loadingContainer">
+<div class="lds-dual-ring"></div>
+<h3>LOADING</h3>
+</div>
+
+
+
+<form class="notVisible" action="/" method="POST">
     <fieldset>
         <h1>Competentie Toevoegen</h1>
         <div>
-            <label for="naam">Competentie:</label>
-            <input type="text" id="naam" placeholder="Competentienaam" name="naam">
+            <label for="naam">Competentie</label>
+            <input type="text" id="naam" placeholder="Competentienaam" name="naam" autocomplete="off">
             <button type="submit" id="submitButton">Submit</button>
            
         </div>
-        <a href="competenties">Zie alle Competenties</a>
+       <a href="competenties"> <img class="arrowLink" src="/assets/linkArrow.png" alt="linkArrow">Zie alle Competenties</a>
        
     </fieldset>
 </form>
