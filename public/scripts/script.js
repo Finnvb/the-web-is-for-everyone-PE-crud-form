@@ -1,21 +1,19 @@
-const preloader = document.querySelector(".loadingContainer");
-const form = document.querySelector(".notVisible");
-
+const preloader = document.getElementById("loadingContainer");
+const form = document.getElementById("form");
 
 hidePreloader();
 
 function hidePreloader() {
   setTimeout(() => {
     preloader.style.display = 'block';
-    preloader.style.opacity = 0;
     preloader.style.display = 'none';
     form.classList.add('visible');
-  }, 1500)
+  }, 500)
 }
 
 
-const submitBtn = document.querySelector('#submitButton');
-const submitSucces = document.querySelector('.submitSucces');
+const submitBtn = document.getElementById("submitButton");
+const submitSucces = document.getElementById("submitSucces");
 // console.log(submitBtn)
 // console.log(submitSucces)
 

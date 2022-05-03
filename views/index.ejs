@@ -2,19 +2,19 @@
 
 <body>
 
-<div class="loadingContainer">
+<div id="loadingContainer">
 <div class="lds-dual-ring"></div>
 <h3>LOADING</h3>
 </div>
 
 
 
-<form class="notVisible" action="/" method="POST">
+<form class="notVisible" id="form" action="/" method="POST">
     <fieldset>
         <h1>Competentie Toevoegen</h1>
         <div>
             <label for="naam">Competentie</label>
-            <input type="text" id="naam" placeholder="Competentienaam" name="naam" autocomplete="off">
+            <input type="text" id="naam" placeholder="Competentienaam" name="naam" autocomplete="off" required>
             <button type="submit" id="submitButton">Submit</button>
            
         </div>
@@ -23,12 +23,12 @@
     </fieldset>
 </form>
 
-<div class="submitSucces">
+<div id="submitSucces">
     <h3>Competentie Toegevoegd!</h3>
     <img class="submitIcon" src="/assets/checkmark.png" alt="checkmark">
 </div>
 
-<div class="submitFail">
+<div id="submitFail">
     <h3>Toevoegen mislukt!</h3>
     <img class="submitIcon" src="/assets/cross.png" alt="checkmark">
 </div>

@@ -138,7 +138,7 @@ ul li {
 }
 
 
-.submitSucces{
+#submitSucces{
     width: 200px;
     height: 200px;
     background-color: green;
@@ -152,7 +152,7 @@ ul li {
 }
 
 
-.submitFail{
+#submitFail{
     width: 200px;
     height: 200px;
     background-color: red;
@@ -172,7 +172,7 @@ ul li {
 
 /* loader animation */
 
-.loadingContainer {
+#loadingContainer {
     width: 200px;
     height: 200px;
     background-color: gray;
