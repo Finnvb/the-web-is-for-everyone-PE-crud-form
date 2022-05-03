@@ -51,7 +51,6 @@ form.addEventListener("submit", async (event) => {
   const r = await fetch(urlAPI, options);
 
   if (!r.ok) {
-    console.log("nee")
     submitFail.style.display = 'block'
     setTimeout(() => {
       submitFail.style.display = 'none'
