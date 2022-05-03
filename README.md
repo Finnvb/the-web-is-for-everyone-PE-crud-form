@@ -13,7 +13,55 @@ Dit project is een crud form waarmee je nieuwe competenties kunt toevoegen aan d
 
 ## Code
 
-### Javascript server side post
+### Client-side post naar de API van jeugdzorg
+```
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  // const resource = new URL(form.action || window.location.href);
+  const formData = new FormData(form);
+
+  const options = {
+    method: form.method || "get",
+    mode: 'cors',
+    headers: {
+      'Accept': 'application/json',
+    }
+  };
+
+  if (options.method === "get") {
+    // resource.search = new URLSearchParams(formData);
+  } else {
+    if (form.enctype === "multipart/form-data") {
+      options.body = formData;
+    } else {
+      options.body = JSON.stringify(Object.fromEntries(formData));
+      options.headers['Content-Type'] = 'application/json';
+    }
+  }
+
+  const r = await fetch(urlAPI, options);
+
+  if (!r.ok) {
+    console.log("nee")
+    submitFail.style.display = 'block'
+    setTimeout(() => {
+      submitFail.style.display = 'none'
+    }, 2000)
+    return;
+  }
+
+
+  submitSucces.style.display = 'block'
+  setTimeout(() => {
+    submitSucces.style.display = 'none'
+  }, 2000)
+
+});
+```
+### server side post naar de API
+Wanneer Javascript is uitgeschakeld kun je nog steeds posten naar de API
 ```
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
