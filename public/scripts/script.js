@@ -1,7 +1,13 @@
 const preloader = document.getElementById("loadingContainer");
 const form = document.getElementById("form");
+const submitBtn = document.getElementById("submitButton");
+const submitSucces = document.getElementById("submitSucces");
+const submitFail = document.getElementById("submitFail");
+
+const urlAPI = 'https://jeugdzorg.api.fdnd.nl/v1/competentie';
 
 hidePreloader();
+clientSidePost();
 
 function hidePreloader() {
   preloader.style.display = 'block';
@@ -11,14 +17,11 @@ function hidePreloader() {
 }
 
 
-const submitBtn = document.getElementById("submitButton");
-const submitSucces = document.getElementById("submitSucces");
-const submitFail = document.getElementById("submitFail");
-
-const urlAPI = 'https://jeugdzorg.api.fdnd.nl/v1/competentie';
 
 
+function clientSidePost(){
 // Client-side post with formData
+
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -63,3 +66,4 @@ form.addEventListener("submit", async (event) => {
   }, 2000)
 
 });
+}
