@@ -4,27 +4,62 @@ const form = document.getElementById("form");
 hidePreloader();
 
 function hidePreloader() {
+  preloader.style.display = 'block';
   setTimeout(() => {
-    preloader.style.display = 'block';
     preloader.style.display = 'none';
-    form.classList.add('visible');
-  }, 500)
+  }, 1000)
 }
 
 
 const submitBtn = document.getElementById("submitButton");
 const submitSucces = document.getElementById("submitSucces");
-// console.log(submitBtn)
-// console.log(submitSucces)
+const submitFail = document.getElementById("submitFail");
+
+const urlAPI = 'https://jeugdzorg.api.fdnd.nl/v1/competentie';
 
 
- 
+// Client-side post with formData
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-// submitBtn.addEventListener('click', () =>{
-// preloader.style.display = 'none';
-// submitSucces.style.display = 'block'
-//   setTimeout(() => {
-  
-   
-//     submitSucces.style.display = 'none'
-// }, 2000)})
+  const form = event.currentTarget;
+  // const resource = new URL(form.action || window.location.href);
+  const formData = new FormData(form);
+
+  const options = {
+    method: form.method || "get",
+    mode: 'cors',
+    headers: {
+      'Accept': 'application/json',
+    }
+  };
+
+  if (options.method === "get") {
+    // resource.search = new URLSearchParams(formData);
+  } else {
+    if (form.enctype === "multipart/form-data") {
+      options.body = formData;
+    } else {
+      options.body = JSON.stringify(Object.fromEntries(formData));
+      options.headers['Content-Type'] = 'application/json';
+    }
+  }
+
+  const r = await fetch(urlAPI, options);
+
+  if (!r.ok) {
+    console.log("nee")
+    submitFail.style.display = 'block'
+    setTimeout(() => {
+      submitFail.style.display = 'none'
+    }, 2000)
+    return;
+  }
+
+
+  submitSucces.style.display = 'block'
+  setTimeout(() => {
+    submitSucces.style.display = 'none'
+  }, 2000)
+
+});

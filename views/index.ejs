@@ -2,36 +2,35 @@
 
 <body>
 
-<div id="loadingContainer">
-<div class="lds-dual-ring"></div>
-<h3>LOADING</h3>
-</div>
+    <form id="form" action="/" method="POST">
+        <fieldset>
+            <h1>Competentie Toevoegen</h1>
+            <div>
+                <label for="naam">Competentie</label>
+                <input type="text" id="naam" placeholder="Competentienaam" name="naam" autocomplete="off" required>
+                <button type="submit" id="submitButton">Submit</button>
 
+            </div>
+            <a href="competenties"> <img class="arrowLink" src="/assets/linkArrow.png" alt="linkArrow">Zie alle
+                Competenties</a>
 
+        </fieldset>
+    </form>
 
-<form class="notVisible" id="form" action="/" method="POST">
-    <fieldset>
-        <h1>Competentie Toevoegen</h1>
-        <div>
-            <label for="naam">Competentie</label>
-            <input type="text" id="naam" placeholder="Competentienaam" name="naam" autocomplete="off" required>
-            <button type="submit" id="submitButton">Submit</button>
-           
-        </div>
-       <a href="competenties"> <img class="arrowLink" src="/assets/linkArrow.png" alt="linkArrow">Zie alle Competenties</a>
-       
-    </fieldset>
-</form>
+    <div id="submitSucces">
+        <h3>Competentie Toegevoegd!</h3>
+        <img class="submitIcon" src="/assets/checkmark.png" alt="checkmark">
+    </div>
 
-<div id="submitSucces">
-    <h3>Competentie Toegevoegd!</h3>
-    <img class="submitIcon" src="/assets/checkmark.png" alt="checkmark">
-</div>
+    <div id="submitFail">
+        <h3>Toevoegen mislukt!</h3>
+        <img class="submitIcon" src="/assets/cross.png" alt="checkmark">
+    </div>
 
-<div id="submitFail">
-    <h3>Toevoegen mislukt!</h3>
-    <img class="submitIcon" src="/assets/cross.png" alt="checkmark">
-</div>
+    <div id="loadingContainer">
+        <div class="lds-dual-ring"></div>
+        <h3>LOADING</h3>
+    </div>
 
-
-<%- include('./partials/foot') %>
+    <noscript>Please enable Javascript...</noscript>
+    <%- include('./partials/foot') %>
