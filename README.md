@@ -61,7 +61,7 @@ form.addEventListener("submit", async (event) => {
 });
 ```
 ### server side post naar de API
-Wanneer Javascript is uitgeschakeld kun je nog steeds posten naar de API
+Wanneer Javascript is uitgeschakeld kun je nog steeds posten naar de API dmv de server
 ```
 app.get('/', async (req, res) => {
     competentie = await fetchJson(`${URL}v1/competentie`).then(json => json.data)
